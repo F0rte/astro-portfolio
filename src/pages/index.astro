@@ -29,9 +29,7 @@ const sortedEvents = allEvents.sort((a, b) => b.data.date.valueOf() - a.data.dat
       <div class="space-y-6">
         {sortedEvents.map((event) => (
           <a href={`/events/${event.slug}`} class="block hover:bg-gray-50 p-4 -mx-4 rounded transition">
-            <h3 class="text-lg font-bold text-blue-600">{event.data.title}</h3>
-            <p class="text-sm text-gray-500 mb-1">{event.data.date.toLocaleDateString()}</p>
-            <p>{event.data.description}</p>
+            <h3 class="text-lg font-bold text-blue-600">{event.data.title} ({event.data.date.toLocaleDateString("ja")})</h3>
           </a>
         ))}
       </div>
