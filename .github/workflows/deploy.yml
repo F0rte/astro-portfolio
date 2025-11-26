@@ -50,18 +50,6 @@ jobs:
         run: terraform plan -no-color
         working-directory: infra
 
-      - name: Comment Terraform plan to PR
-        if: github.event_name == 'pull_request'
-        uses: actions/github-script@v6
-        with:
-          script: |
-            github.rest.issues.createComment({
-              issue_number: context.payload.pull_request.number,
-              body: `Terraform Plan Output:\n\`\`\`\n${process.env.PLAN}\n\`\`\``
-            })
-        env:
-          PLAN: ${{ steps.plan.outputs.stdout }}
-
       - name: Terraform Apply
         run: terraform apply -auto-approve
         working-directory: infra
