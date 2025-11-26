@@ -2,6 +2,7 @@ resource "aws_amplify_app" "astro-portfolio" {
   name = "astro-amplify-portfolio"
   repository = "https://github.com/F0rte/astro-portfolio"
   platform = "WEB"
+  access_token = var.github_token
   environment_variables = {
     "NODE_ENV" = "production"
   }

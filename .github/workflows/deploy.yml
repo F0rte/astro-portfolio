@@ -29,6 +29,9 @@ jobs:
       id-token: write
       contents: read
 
+    env:
+      TF_VAR_github_token: ${{ secrets.REPOSITORY_PAT }}
+
     steps:
       - uses: actions/checkout@v3
 
