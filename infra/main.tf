@@ -25,7 +25,7 @@ data "aws_iam_policy_document" "amplify_assume_role" {
     }
 }
 
-resource "aws_iam_role" "astro-portfolio-role" {
-  name = "astro-portfolio-role"
+resource "aws_iam_role" "amplify-astro-portfolio-role" {
+  name = "amplify-astro-portfolio-role"
   assume_role_policy = data.aws_iam_policy_document.amplify_assume_role.json
 }
