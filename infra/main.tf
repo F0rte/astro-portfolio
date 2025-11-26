@@ -1,3 +1,10 @@
+terraform {
+  backend "s3" {
+    bucket = "amplify-astro-terraform"
+    key    = "astro-portfolio/terraform.tfstate"
+    region = "ap-northeast-1"
+  }
+}
 resource "aws_amplify_app" "astro-portfolio" {
   name = "astro-amplify-portfolio"
   repository = "https://github.com/F0rte/astro-portfolio"
