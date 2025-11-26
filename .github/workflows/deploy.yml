@@ -18,9 +18,9 @@ jobs:
       - run: npm ci
       - run: npm run build
 
-      - name: Deploy to Amplify
-        run: npx amplify publish
-        if: github.ref == 'refs/heads/master' && github.event_name == 'push'
+      # - name: Deploy to Amplify
+      #   run: npx amplify publish
+      #   if: github.ref == 'refs/heads/master' && github.event_name == 'push'
 
   terraform:
     runs-on: ubuntu-latest
