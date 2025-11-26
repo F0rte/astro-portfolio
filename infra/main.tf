@@ -13,6 +13,17 @@ resource "aws_amplify_branch" "master" {
   enable_auto_build = true
 }
 
+data "aws_iam_policy_document" "amplify_assume_role" {
+    statement {
+      effect = "Allow"
+      principals {
+        type = "Service"
+        identifiers = [ "amplify.amazonaws.com" ]
+      }
+      actions = [ "sts:AssumeRole" ]
+    }
+}
+
 resource "aws_iam_role" "astro-portfolio-role" {
   name = "astro-portfolio-role"
   assume_role_policy = data.aws_iam_policy_document.amplify_assume_role.json
