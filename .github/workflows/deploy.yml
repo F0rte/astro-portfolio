@@ -18,9 +18,9 @@ jobs:
       - run: npm ci
       - run: npm run build
 
-      - name: Deploy to Amplify
-        run: npx amplify publish
-        if: github.ref == 'refs/heads/master' && github.event_name == 'push'
+      # - name: Deploy to Amplify
+      #   run: npx amplify publish
+      #   if: github.ref == 'refs/heads/master' && github.event_name == 'push'
 
   terraform:
     runs-on: ubuntu-latest
@@ -28,6 +28,9 @@ jobs:
     permissions:
       id-token: write
       contents: read
+
+    env:
+      TF_VAR_github_token: ${{ secrets.REPOSITORY_PAT }}
 
     steps:
       - uses: actions/checkout@v3
