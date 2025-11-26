@@ -46,6 +46,7 @@ jobs:
         working-directory: infra
 
       - name: Terraform plan
+        id: plan
         run: terraform plan -no-color
         working-directory: infra
 
@@ -56,8 +57,10 @@ jobs:
           script: |
             github.rest.issues.createComment({
               issue_number: context.payload.pull_request.number,
-              body: `Terraform Plan Output:\n\`\`\`\n${steps.plan.outputs.stdout}\n\`\`\``
+              body: `Terraform Plan Output:\n\`\`\`\n${process.env.PLAN}\n\`\`\``
             })
+        env:
+          PLAN: ${{ steps.plan.outputs.stdout }}
 
       - name: Terraform Apply
         run: terraform apply -auto-approve
