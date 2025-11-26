@@ -6,22 +6,17 @@ date: 2025-11-24
 ## 技術スタック
 - **Languages**: TypeScript
 - **Frameworks**: Astro
-- **CSS**: Tailwind CSS
 - **IaC / AWS**: Terraform, Amplify
-- **CI/CD / DevOps**: GitHub Actions, OIDC, GitHub
+- **CI/CD**: GitHub Actions
 
 ## 概要
-(このmdファイルはGitHub Copilotを用いて生成しています)  
-AstroとTailwind CSSでポートフォリオサイトを開発。Geminiに相談し、初めてAstroを採用  
-AWS Amplifyでホスティングし、Terraformによる完全なIaCでインフラ管理  
-GitHub Actions（OIDC認証）によるCI/CDパイプラインで、PRマージ時に自動デプロイ
+Astroでポートフォリオサイトを開発  
+TerraformによるIaCでリソース定義を行い、GitHub ActionsによるCI/CDで自動デプロイを実装
 
 - GitHub Repository: https://github.com/F0rte/astro-portfolio
 
 ## 経験した開発
-- Astroによる静的サイト生成
-- Tailwind CSSによるデザイン適用
-- TypeScriptで型安全な開発
-- TerraformによるAmplify・IAM等AWSリソースのIaC管理
-- GitHub Actions（OIDC認証）によるCI/CDパイプライン構築
-- PRマージ時の自動デプロイ・インフラ更新
+ポートフォリオサイトを初めて実装した  
+AstroのWebページ部分については、astroのプロジェクト作成`npm create astro@latest`と、AI(Gemini)による生成コードを用いて実装し、一部を改修した  
+インフラは、普段インターン等でCloudFormationを使い慣れていたが、初めてTerraformを採用した  
+コミットの半分以上がデプロイエラーの解消となっているが、CI/CDによる自動デプロイまで実装することができた
