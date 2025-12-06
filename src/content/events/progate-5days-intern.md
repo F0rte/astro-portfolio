@@ -25,5 +25,5 @@ PRでセルフチェックを行うなど、コードレビューを人力で行
 今回のインターンで得た理解を、Qiita記事にアウトプットしている  
 https://qiita.com/warisuno/items/de5bfef14cf4286c9dc6
 
-詳細は、[Progate Path コミュニティ Advent Calendar 2025](./qiita-advent-calendar-2025)
+詳細は、[Progate Path コミュニティ Advent Calendar 2025](../qiita-advent-calendar-2025)
 
