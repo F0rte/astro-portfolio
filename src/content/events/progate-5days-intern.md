@@ -23,5 +23,7 @@ PRでセルフチェックを行うなど、コードレビューを人力で行
 
 ## Git内部構造の理解
 今回のインターンで得た理解を、Qiita記事にアウトプットしている  
-https://qiita.com/warisuno/private/2bec847fd322f5412a64  
-※ 11/26現在執筆中のため、限定公開中
+https://qiita.com/warisuno/items/de5bfef14cf4286c9dc6
+
+詳細は、[Progate Path コミュニティ Advent Calendar 2025](./qiita-advent-calendar-2025)
+
